@@ -20,11 +20,7 @@ def can_be_created_with_a_hash_of_attributes
       lead: "Paul Newman",
       in_theaters: false
   }
-  movie = Movie.new
-  attributes.each do |key, value|
-    movie.send("#{key}=", value)
-  end
-  movie
+  movie = 
 end
 
 def can_be_created_in_a_block(args = __)
@@ -38,7 +34,7 @@ def can_be_created_in_a_block(args = __)
 end
 
 def can_get_the_first_item_in_the_database
-
+  movie = Movie.find(1)
 end
 
 def can_get_the_last_item_in_the_database
