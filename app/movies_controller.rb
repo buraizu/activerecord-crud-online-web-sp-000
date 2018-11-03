@@ -22,7 +22,9 @@ def can_be_created_with_a_hash_of_attributes
   }
   movie = Movie.new
   attributes.each do |key, value|
-    self.send("#{key}=", value)
+    movie.send("#{key}=", value)
+  end
+  movie
 end
 
 def can_be_created_in_a_block(args = __)
